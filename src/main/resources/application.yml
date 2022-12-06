@@ -1,0 +1,45 @@
+spring:
+  # DB 연결
+  datasource:
+    # 설치된 PostgreSQL 과 연결 URL
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/board
+#    username: admin
+#    password: admin
+    url: jdbc:postgresql://localhost:5432/mydb
+    username: thisuser
+    password: 1234
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: create
+    database: postgresql
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    open-in-view: true
+    show-sql: true
+    generate-ddl: true
+
+  sql:
+    init:
+      platform: thisuser
+
+#  # mail 전송 기능을 추가
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ex969634@gmail.com
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+  # 콘솔 확인 을 위한 always
+  output:
+    ansi:
+      enabled: always
+server:
+  port: 8080
