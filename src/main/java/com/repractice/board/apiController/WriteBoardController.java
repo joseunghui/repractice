@@ -27,13 +27,14 @@ public class WriteBoardController {
 
     @PostMapping(WRITE_BOARD)
     public ResponseEntity write(
-            @Valid @ModelAttribute WriteBoardFormDto form) {
+            @Valid @ModelAttribute("form") WriteBoardFormDto form) {
 
         // TODO : 삭제
         System.out.println("===writeboardcontroller===");
-        System.out.println("form = " + form);
+        System.out.println("form = " + form.getWriter() + form.getContent() + form.getTitle());
 
         // 글 작성 전에 수기로 입력하지 않은(작성 날짜) 입력 + 데이터 타입 변경해서 저장(LocalDateTime => String)
+
 
 
         // 글 작성 내용 등록
