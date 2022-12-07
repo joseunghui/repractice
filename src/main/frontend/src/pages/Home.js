@@ -11,8 +11,8 @@ const Home = () => {
             <Link to="/board">
                 <button>게시판 목록</button>
             </Link>
-            <Link to="/board">
-                <button>게시판 목록</button>
+            <Link to="/member/login">
+                <button>로그인</button>
             </Link>
         </>
     )

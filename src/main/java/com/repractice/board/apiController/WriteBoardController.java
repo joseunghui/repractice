@@ -29,9 +29,6 @@ public class WriteBoardController {
     public ResponseEntity write(
             @Valid @ModelAttribute("form") WriteBoardFormDto form) {
 
-        // TODO : 삭제
-        System.out.println("form = " + form.getWriter() + form.getContent() + form.getTitle());
-
         // 글 작성 전에 수기로 입력하지 않은(작성 날짜) 입력 + 데이터 타입 변경해서 저장(LocalDateTime => String)
         WriteBoardCommand command = writeBoardMapper.dtoToCommand(form);
 

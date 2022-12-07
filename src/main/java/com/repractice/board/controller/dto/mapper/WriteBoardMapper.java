@@ -25,7 +25,7 @@ public abstract class WriteBoardMapper {
             @MappingTarget final WriteBoardCommand.WriteBoardCommandBuilder targetBuilder,
             WriteBoardFormDto dto) {
 
-        // 생년 월일을 현재 날짜로 변경해서 저장
+        // 작성일을 현재 날짜로 변경해서 저장
         targetBuilder.dateTime(LocalDateTime.now());
 
         // bnumber 설정
