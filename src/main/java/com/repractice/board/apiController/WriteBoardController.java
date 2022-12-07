@@ -7,6 +7,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -23,9 +24,10 @@ public class WriteBoardController {
 
     private final WriteBoardMapper writeBoardMapper;
 
+
     @PostMapping(WRITE_BOARD)
     public ResponseEntity write(
-            @Valid @ModelAttribute("form") WriteBoardFormDto form) {
+            @Valid @ModelAttribute WriteBoardFormDto form) {
 
         // TODO : 삭제
         System.out.println("===writeboardcontroller===");

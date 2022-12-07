@@ -11,6 +11,7 @@ function App () {
   return (
       <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/board" element={<Home />} />
           <Route path="/board/write" element={<WriteBoardPage />} />
       </Routes>
            );
