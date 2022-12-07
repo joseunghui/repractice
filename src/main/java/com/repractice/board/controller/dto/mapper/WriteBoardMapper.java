@@ -8,6 +8,7 @@ import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Mapper(config = MapstructConfig.class)
@@ -29,6 +30,6 @@ public abstract class WriteBoardMapper {
         targetBuilder.dateTime(LocalDateTime.now());
 
         // bnumber 설정
-        targetBuilder.bnumber(dto.getWriter() + dto.getDataTime());
+        targetBuilder.bnumber(dto.getWriter() + LocalDate.now().toString());
     }
 }
