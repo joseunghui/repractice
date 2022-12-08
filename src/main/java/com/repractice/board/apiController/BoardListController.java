@@ -22,16 +22,11 @@ public class BoardListController {
     // service (Mapper 필요없음, 단순조회)
     private final BoardListService boardListService;
 
-    @GetMapping(BOARDLIST)
+    @PostMapping(BOARDLIST)
     public ResponseEntity list() {
 
-        //TODO 삭제
-        System.out.println("board List Controller 실행됨!");
-
         // service에서 목록 가져오기
-        Map<Board, String> boardStringMap = (Map<Board, String>) boardListService.list();
-        System.out.println("boardStringMap = " + boardStringMap);
-
+        List<Board> boardList = boardListService.list();
 
         return new ResponseEntity<>(
                 boardListService.list(),

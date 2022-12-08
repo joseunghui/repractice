@@ -3,6 +3,14 @@ import axios from "axios";
 import {Link} from "react-router-dom";
 
 const BoardListForm = () => {
+
+    axios.post('/board', null, null)
+        .then(() => {
+        })
+        .catch((Error) => {
+            console.log("BoardListForm.js 오류")
+        });
+
     return (
         <>
             <h4>BoardListForm</h4>
