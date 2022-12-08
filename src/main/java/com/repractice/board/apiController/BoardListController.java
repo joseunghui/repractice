@@ -7,7 +7,11 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+import java.util.Map;
 
 import static com.repractice.board.controller.constants.BoardWebUrl.BOARDLIST;
 
@@ -19,15 +23,18 @@ public class BoardListController {
     private final BoardListService boardListService;
 
     @GetMapping(BOARDLIST)
-    public ResponseEntity<Board> list() {
+    public ResponseEntity list() {
 
         //TODO 삭제
         System.out.println("board List Controller 실행됨!");
 
         // service에서 목록 가져오기
-        boardListService.list();
+        Map<Board, String> boardStringMap = (Map<Board, String>) boardListService.list();
+        System.out.println("boardStringMap = " + boardStringMap);
+
 
         return new ResponseEntity<>(
+                boardListService.list(),
                 getSuccessHeader(),
                 HttpStatus.OK
         );

@@ -1,5 +1,7 @@
 import React, {useState} from "react";
 import axios from "axios";
+import BoardListForm from "../boardList/BoardListForm";
+import {Link} from "react-router-dom";
 
 const WriteBoardForm = () => {
     
@@ -36,7 +38,6 @@ const WriteBoardForm = () => {
         }).catch((Error) => {
             console.log("WriteBoardForm.js ==> 글 등록 시 에러 발생")
         });
-
     };
 
     return (
@@ -49,11 +50,6 @@ const WriteBoardForm = () => {
 
                 <button type={"submit"} onClick={onClickBtn}>등록</button>
             </form>
-
-            <span style={{display: 'inline-block'}}>
-                이거 잘 뜨나?
-            </span>
-
         </div>
     );
 };
