@@ -27,8 +27,8 @@ public class BoardListController {
         // service에서 목록 가져오기
         List<Board> boardList = boardListService.list();
 
-        return new ResponseEntity<>(
-                boardListService.list(),
+        return new ResponseEntity<List<Board>>(
+                boardList,
                 getSuccessHeader(),
                 HttpStatus.OK
         );
