@@ -32,7 +32,7 @@ const WriteBoardForm = () => {
             }
         }).then(() => {
             console.log("/board/write -> axios 실행")
-            document.location.href = "/";  //TODO:경로변경
+            document.location.href = "/board";
         }).catch((Error) => {
             console.log("WriteBoardForm.js ==> 글 등록 시 에러 발생")
         });
@@ -49,6 +49,11 @@ const WriteBoardForm = () => {
 
                 <button type={"submit"} onClick={onClickBtn}>등록</button>
             </form>
+
+            <span style={{display: 'inline-block'}}>
+                이거 잘 뜨나?
+            </span>
+
         </div>
     );
 };
