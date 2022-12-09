@@ -3,26 +3,23 @@ import axios from "axios";
 
 const BoardListForm = () => {
 
-    const [list, setList] = useState([]);
+    let [list, setList] = useState([]);
 
     axios.post('/board', null, null)
-        .then( response => {
-            setList(response.data);
-            console.log(response.data);
+        .then( (res) => {
+            setList(res.data);
         })
         .catch((Error) => {
             console.log("BoardListForm.js 오류")
         });
 
-    const BoardList = ({list}) => {
-        return (
-            <div>
-                <h3>boardList</h3>
-            </div>
-        );
-    };
 
 
+    return (
+        <div>
+
+        </div>
+    )
 };
 
 export default BoardListForm;
