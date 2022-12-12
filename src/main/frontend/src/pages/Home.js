@@ -11,6 +11,10 @@ const Home = () => {
             <Link to="/board">
                 <button>게시판 목록</button>
             </Link>
+            <br/><br/><br/>
+            <Link to="/member/add">
+                <button>회원가입</button>
+            </Link>
             <Link to="/member/login">
                 <button>로그인</button>
             </Link>

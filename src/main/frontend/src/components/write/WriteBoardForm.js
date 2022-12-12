@@ -16,9 +16,6 @@ const WriteBoardForm = () => {
     });
 
     const onchangeInput = (e) => {
-        // Input에 값 입력 시, value 변경
-        console.log("input 입력 : ", values.writer, values.title, values.content);
-
         const {name, value} = e.target;
         setValues({...values, [name]: value});
     };
