@@ -21,7 +21,7 @@ public class BoardListController {
     // service (Mapper 필요없음, 단순조회)
     private final BoardListService boardListService;
 
-    @PostMapping(BOARDLIST)
+    @GetMapping(BOARDLIST)
     public ResponseEntity list() {
 
         // service에서 목록 가져오기
