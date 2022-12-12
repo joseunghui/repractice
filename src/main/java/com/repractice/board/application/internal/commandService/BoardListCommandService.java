@@ -9,7 +9,7 @@ import java.util.List;
 
 @Service
 @RequiredArgsConstructor
-public class BoardListService {
+public class BoardListCommandService {
     private final BoardRepository boardRepository;
 
     // board

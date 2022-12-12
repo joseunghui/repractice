@@ -1,10 +1,9 @@
 package com.repractice.board.apiController;
 
-import com.repractice.board.application.internal.commandService.BoardListService;
+import com.repractice.board.application.internal.commandService.BoardListCommandService;
 import com.repractice.board.application.internal.commandService.WriteBoardCommandService;
 import com.repractice.board.controller.dto.WriteBoardFormDto;
 import com.repractice.board.controller.dto.mapper.WriteBoardMapper;
-import com.repractice.board.domain.model.aggregates.Board;
 import com.repractice.board.domain.model.commands.WriteBoardCommand;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
@@ -23,7 +22,7 @@ import static com.repractice.board.controller.constants.BoardWebUrl.WRITE_BOARD;
 public class WriteBoardController {
 
     private final WriteBoardCommandService writeBoardCommandService;
-    private final BoardListService boardListService;
+    private final BoardListCommandService boardListCommandService;
 
     private final WriteBoardMapper writeBoardMapper;
 
