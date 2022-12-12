@@ -2,6 +2,7 @@ package com.repractice.board.apiController;
 
 import com.repractice.board.application.internal.commandService.AddMemberCommandService;
 import com.repractice.board.controller.dto.AddMemberFormDto;
+import com.repractice.board.controller.dto.mapper.AddMemberMapper;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -12,17 +13,21 @@ import org.springframework.web.bind.annotation.RestController;
 
 import javax.validation.Valid;
 
+import static com.repractice.board.controller.constants.MemberWebUrl.MEMBER_ADD;
+
 @RestController
 @RequiredArgsConstructor
 public class AddMemberController {
     private final AddMemberCommandService addMemberCommandService;
 
-    @PostMapping("/member/add")
+    private final AddMemberMapper addMemberMapper;
+
+    @PostMapping(MEMBER_ADD)
     public ResponseEntity add(
-            @Valid @ModelAttribute("member") AddMemberFormDto form) {
+            @Valid @ModelAttribute("form") AddMemberFormDto form) {
 
         // 회원가입 등록
-        addMemberCommandService.addMember(form);
+//        addMemberCommandService.addMember(command);
 
         return new ResponseEntity<>(
                 getSuccessHeader(),
