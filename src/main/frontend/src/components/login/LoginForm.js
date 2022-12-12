@@ -4,8 +4,8 @@ import axios from "axios";
 const LoginForm = () => {
 
     const [values, setValues] = useState({
-        // MEMBER : id(Long, sequence), memberId, pw, name, phone, birth, email
-        memberId : "",
+        // MEMBER : id(Long, sequence), username, pw(비번 확인O), email
+        username : "",
         pw : ""
     });
 
@@ -20,7 +20,7 @@ const LoginForm = () => {
         // axios
         axios.post('/member/login', null, {
             params: {
-                memberId: values.memberId,
+                username: values.username,
                 pw: values.pw
             }
         }).then(() => {
@@ -35,7 +35,7 @@ const LoginForm = () => {
         <div>
             <h4>로그인</h4>
             <form>
-                <input name={"memberId"} type={"text"} placeholder={"아이디를 입력하세요."} onChange={onChangeInput}/>
+                <input name={"username"} type={"text"} placeholder={"아이디를 입력하세요."} onChange={onChangeInput}/>
                 <input name={"pw"} type={"password"} placeholder={"비밀번호를 입력하세요."} onChange={onChangeInput}/>
                 <button type={"submit"} onClick={onClickBtn}>로그인</button>
             </form>
