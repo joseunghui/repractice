@@ -28,7 +28,7 @@ const WriteBoardForm = () => {
     };
 
     return (
-        <div>
+        <div  style={{textAlign: "center"}}>
             <form>
                 <input name={"title"} type={"text"} placeholder={"제목"} onChange={onchangeInput}/><br/>
                 <input name={"writer"} type={"text"} placeholder={"작성자"} onChange={onchangeInput}/><br/>

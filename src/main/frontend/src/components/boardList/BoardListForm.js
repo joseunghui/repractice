@@ -17,7 +17,7 @@ const BoardListForm = () => {
 
 
     return (
-        <>
+        <div  style={{textAlign: "center"}}>
             <h4>글 목록</h4>
             <table style={{border : "1px solid", borderCollapse : "collapse"}}>
                 {list.map( board =>
@@ -29,7 +29,7 @@ const BoardListForm = () => {
                         </tr>
                 )}
             </table>
-        </>
+        </div>
     )
 };
 

@@ -28,7 +28,7 @@ const LoginForm = () => {
     };
 
     return (
-        <div>
+        <div style={{textAlign: "center"}}>
             <h4>로그인</h4>
             <form>
                 <input name={"username"} type={"text"} placeholder={"아이디를 입력하세요."} onChange={onChangeInput}/>
