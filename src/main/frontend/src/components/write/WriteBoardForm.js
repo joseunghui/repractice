@@ -1,19 +1,12 @@
 import React, {useState} from "react";
 import axios from "axios";
-import BoardListForm from "../boardList/BoardListForm";
-import {Link} from "react-router-dom";
+import Board from "../../modules/models/Board";
 
 const WriteBoardForm = () => {
     
     console.log("WriteBoardForm 실행")
 
-    const [values, setValues] = useState({
-        // BOARD TABLE
-        // bnumber(자동 sequence), writer, dateTime(LocalTime), title, content
-        writer: "",
-        title: "",
-        content: ""
-    });
+    const [values, setValues] = useState({Board});
 
     const onchangeInput = (e) => {
         const {name, value} = e.target;

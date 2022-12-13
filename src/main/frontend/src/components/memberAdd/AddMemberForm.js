@@ -4,14 +4,7 @@ import Users from "../../modules/models/Users";
 
 const AddMemberForm = () => {
 
-    const [values, setValues] = useState({
-        // MEMBER : id(Long, sequence), username, pw(비번 확인O), email
-        username: "",
-        pw: "",
-        confirmPw: "",
-        email: "",
-    });
-
+    const [values, setValues] = useState({Users});
 
     const onChangeInput = (e) => {
         const {name, value} = e.target;
