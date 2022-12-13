@@ -3,8 +3,6 @@ import axios from "axios";
 import Board from "../../modules/models/Board";
 
 const WriteBoardForm = () => {
-    
-    console.log("WriteBoardForm 실행")
 
     const [values, setValues] = useState({Board});
 
@@ -23,7 +21,6 @@ const WriteBoardForm = () => {
                 content: values.content
             }
         }).then(() => {
-            console.log("/board/write -> axios 실행")
             document.location.href = "/board";
         }).catch((Error) => {
             console.log("WriteBoardForm.js ==> 글 등록 시 에러 발생")
