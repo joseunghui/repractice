@@ -21,12 +21,11 @@ const LoginForm = () => {
                 pw: values.pw
             }
         }).then(() => {
-
+            document.location.href = "/";
         }).catch((Error) => {
-
+            console.log("LoginForm.js ->  에러발생");
         });
     };
-
 
     return (
         <div>
