@@ -1,5 +1,4 @@
-import React from "react";
-import {useState} from "@types/react";
+import React, {useState} from "react";
 
 const Board = () => {
     const [values, setValues] = useState({

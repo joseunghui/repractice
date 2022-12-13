@@ -19,7 +19,7 @@ const BoardListForm = () => {
     return (
         <div  style={{textAlign: "center"}}>
             <h4>글 목록</h4>
-            <table style={{border : "1px solid", borderCollapse : "collapse"}}>
+            <table style={{border : "1px solid", borderCollapse : "collapse", textAlign: "center"}}>
                 {list.map( board =>
                         <tr style={{border : "1px solid"}}>
                             <td>{board.title}</td>

@@ -35,7 +35,7 @@ const AddMemberForm = () => {
             ID : <input name={"username"} type={"text"} placeholder={"ID를 입력하세요."} onChange={onChangeInput} /><br/>
             PW : <input name={"pw"} type={"password"} placeholder={"비밀번호를 입력하세요."} onChange={onChangeInput} /><br/>
             PW 확인: <input name={"confirmPw"} type={"password"} placeholder={"비밀번호를 확인해주세요."} onChange={onChangeInput} /><br/>
-            E-mail : <input name={"email"} type={"email"} placeholder={"E-mail을 입력하세요."} onChange={onChangeInput} /><br/><br/>
+            E-mail : <input name={"email"} type={"email"} placeholder={"E-mail 을 입력하세요."} onChange={onChangeInput} /><br/><br/>
 
             <button type={"submit"} onClick={onChickInput}>회원가입</button>
         </form>

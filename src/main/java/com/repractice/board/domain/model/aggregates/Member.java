@@ -12,7 +12,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @Builder
 @Entity
-@Table(name = "Membeer")
+@Table(name = "Member")
 public class Member {
     /**
      * 회원 :

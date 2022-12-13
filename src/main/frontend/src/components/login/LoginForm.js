@@ -15,8 +15,7 @@ const LoginForm = () => {
         e.preventDefault();
 
         // axios
-        axios.post('/member/login', null, {
-            params: {
+        axios.post('/member/login', null, { params: {
                 username: values.username,
                 pw: values.pw
             }
@@ -35,7 +34,7 @@ const LoginForm = () => {
                 <input name={"pw"} type={"password"} placeholder={"비밀번호를 입력하세요."} onChange={onChangeInput}/>
                 <button type={"submit"} onClick={onClickBtn}>로그인</button>
             </form>
-            
+
             <a href={"/findId"}>아이디 찾기</a> <p>  </p>
             <a href={"/findPw"}>비밀번호 찾기</a>
         </div>
