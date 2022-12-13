@@ -5,6 +5,7 @@ import com.repractice.board.controller.dto.AddMemberFormDto;
 import com.repractice.board.controller.dto.mapper.AddMemberMapper;
 import com.repractice.board.domain.model.commands.AddMemberCommand;
 import lombok.RequiredArgsConstructor;
+import org.apache.coyote.Response;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,10 +29,11 @@ public class AddMemberController {
             @Valid @ModelAttribute("form") AddMemberFormDto form) {
 
         // 회원가입 등록
-        AddMemberCommand command = addMemberMapper.dtoToCommand(form);
+        AddMemberCommand command = addMemberMapper.dtoToCommand(form); // dro -> command 로 afterMapping
         addMemberCommandService.addMember(command);
 
         return new ResponseEntity<>(
+
                 getSuccessHeader(),
                 HttpStatus.OK
         );
