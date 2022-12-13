@@ -28,7 +28,7 @@ const AddMemberForm = () => {
                 email: values.email
             }
         }).then(() => {
-            // location.href = "/member/login";
+            document.location.href = "/member/login";
             console.log("회원가입 실행");
         }).catch((Error) => {
             console.log("회원가입 에러 발생");
